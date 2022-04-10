@@ -3,10 +3,12 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 import {HYDRATE, createWrapper} from 'next-redux-wrapper'
 import counterSlice from './slices/counterSlice'
 import allRoomsSlice from './slices/allRoomsSlice'
+import roomDetailSlice from './slices/roomDetailSlice'
 
 const combineReducer = combineReducers({
     counter: counterSlice,
-    allRooms: allRoomsSlice
+    allRooms: allRoomsSlice,
+    roomDetail: roomDetailSlice
 })
 
 const reducer = (state: any, action: PayloadAction<any>) => {
@@ -36,5 +38,5 @@ export const useAppDispatch = () => useDispatch<AppDispatch>()
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
 
 export const wrapper = createWrapper(initStore, {
-    debug: true
+    // debug: true
 })

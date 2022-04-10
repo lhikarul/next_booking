@@ -10,10 +10,10 @@ import 'react-toastify/dist/ReactToastify.css';
 
 interface ILayout {
     children: ReactNode,
-    title: string
+    title?: string
 }
 
-export default function Layout ({children, title}: ILayout) {
+export default function Layout ({children, title = 'Book Best Hotels for your Holiday'}: ILayout) {
     return (
         <div>
             <Head>

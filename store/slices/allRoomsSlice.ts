@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { HYDRATE } from "next-redux-wrapper"
 
-interface IAllRooms {
+export interface IAllRooms {
     filteredRoomsCount: number,
     resPerPage: number,
     roomsCount: number,
